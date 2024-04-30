@@ -2,8 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/*Import Main Font cairo*/
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
 }
