@@ -1,16 +1,16 @@
 import { createWebHistory, createRouter } from 'vue-router'
-import UnitView from '../views/UnitView.vue'
+import UnitPage from '../views/UnitPage.vue'
 
 const routes = [
 //   { path: '/', component: HomeView },
   { 
-    path: '/UnitView', 
-    component: UnitView 
+    path: '/UnitPage', 
+    component: UnitPage 
 },
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 })
 
