@@ -1,6 +1,6 @@
 <template>
   <h1>
-    Units Page
+    الوحدات
   </h1>
 </template>
 

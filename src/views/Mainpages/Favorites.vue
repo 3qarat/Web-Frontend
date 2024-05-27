@@ -1,6 +1,6 @@
 <template>
   <h1>
-    Favorites Page
+    المفضلة
   </h1>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <h1>
-    Contact Page
+    تواصل معنا
   </h1>
 </template>
 
