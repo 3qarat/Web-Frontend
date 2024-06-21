@@ -4,6 +4,7 @@
 
       <h1 class="unit__title">
         {{ unitTitle }}
+        <font-awesome-icon :icon="['fas', 'coffee']" />
       </h1>
 
       <div class="unit__images">
@@ -141,7 +142,7 @@ function addToFavorites() {
         .btn__favourits{
           width: 150px;
           height: 40px;
-          background:none;
+          // background:none;
           border: 1px solid #1C3988;
           border-radius: 8px;
           cursor: pointer;
