@@ -1,0 +1,43 @@
+
+//main buttons ex: navbar contct button
+.btn__primary{
+    background-color: $secondary-color;
+    color:white;
+    padding: 5px 24px;
+    border-radius:4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    &:hover{
+        background-color: $blue-hover;
+    }
+    &:active{
+        background-color: $primary-color;
+    }
+}
+
+
+// add to favourits button (outline buttons)
+.btn__favourits {
+    width: 150px;
+    height: 40px;
+    background: none;
+    border: 1px solid $secondary-color;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .5s;
+    @include flex;
+    justify-content: space-around;
+    &:hover{
+        background-color: $blue-hover;
+        color: white;
+        border: none;
+    }
+    &:active{
+        background-color: $primary-color;
+        border: none;
+        color: white;
+    }
+}
+
+

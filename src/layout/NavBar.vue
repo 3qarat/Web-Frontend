@@ -3,7 +3,7 @@
 
         <div class="logo">
             <a href="/">
-                <img src="/public/images/Logo.svg" alt="Logo" class="logo__img">
+                <img src="../assets/images/Logo.svg" alt="Logo" class="logo__img">
             </a>
         </div>
 
@@ -37,8 +37,8 @@
 <script setup>
 
 </script>
+<style lang="scss" scoped>
 
-<style scoped>
 header{
     display: flex;
     justify-content: space-between;
@@ -66,23 +66,6 @@ header{
     .nav__link{
         text-decoration: none;
     } 
-    .btn__primary{
-        background-color: var(--blue);
-        color:white;
-        padding: 5px 24px;
-        border-radius:4px;
-        cursor: pointer;
-        border: none;
-        outline: none;
-    }
-    .btn__primary:hover{
-        
-           background-color: #6E8AE9;
-        
-    }
-    .btn__primary:active{
-           background-color: var(--dark-blue)
-    }
     .contact__link{
         text-decoration: none;
         color: white;

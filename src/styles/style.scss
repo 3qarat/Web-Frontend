@@ -1,37 +1,24 @@
-/*Import Main Font cairo*/
-// @font-face {
-//     font-family: 'Cairo';
-//     src: url('https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700&display=swap');
-// }
+// main.scss
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/reset';
+@import 'base/typography';
+@import 'components/buttons';
+@import 'components/UnitCard';
+@import 'components/OwnerCard';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/Sidebar';
+@import 'pages/home';
+@import 'pages/About';
+@import 'pages/contact';
+@import 'pages/favourits';
+@import 'pages/search';
+@import 'pages/UnitPage';
+@import 'pages/units';
+@import 'themes/darkTheme';
+@import 'vendors/normalize';
 
-
-// USAGE
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Cairo", sans-serif;
-}
-
-
-:root {
-  	/* Colors */
-  	--color-whitesmoke: #f9f9f9;
-  	--blue: #1c3988;
-	--dark-blue: #091638;
-  	--color-lightgray-100: #d7d7d7;
-  	--color-black: #000;
-  	--light-blue: #f3f3fa;
-  	--color-gray-100: #8e8e8e;
-  	--color-gray-200: #8d8d8d;
-  	
-  	--color-red: #dd0000;
-  	--color-white: #fff;
-  	--color-snow: #fffafa;
-  	
-}
-
-h1,h2,h3,h4,h5,h6{
-	color: var(--dark-blue);
-   
+body{
+    background-color: $background-color;
 }

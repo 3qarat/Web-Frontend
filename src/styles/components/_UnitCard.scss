@@ -1,0 +1,63 @@
+.UnitCard{
+    width: 100%;
+    @include flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 25px 0px #00000025;
+
+    img{
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.5s;
+        &:hover{
+                box-shadow: 0 0 25px 0px #00000037;
+                scale: 1.01;
+        }
+    }
+
+    
+    .price__wrapper{
+        width: 90%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    h2{
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+    
+    
+    .unit__specs {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .spec__name {
+        //   width: 180px;
+          height: 40px;
+          border: 1px solid #D7D7D7;
+          border-radius: 8px;
+      
+          .spec-label {
+            margin-left: 5px;
+            color: #091638;
+            font-size: 12px;
+            border-left: 1px solid #D7D7D7;
+            padding: 0 5px;
+          }
+      
+          .spec-value {
+            color: #8E8E8E;
+            font-size: 14px;
+            padding: 0 5px; 
+          }
+        }
+    }
+}
