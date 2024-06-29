@@ -61,6 +61,7 @@
           <side-bar></side-bar>
         </section>
       </main>
+      <footer-layout></footer-layout>
     </template>
 
 <script setup>
@@ -69,6 +70,7 @@ import UnitData from '../../assets/TestData/UnitData.json';
 import { computed } from 'vue';
 
 import SideBar from '../../layout/SideBar.vue';
+import FooterLayout from '../../layout/FooterLayout.vue';
 
 const unit = ref(UnitData); // Assuming you'll fetch or receive unit data somehow
 
@@ -221,6 +223,7 @@ img:hover {
     }
   }
 }
+
 </style>
 
 

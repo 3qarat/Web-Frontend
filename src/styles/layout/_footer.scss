@@ -1,0 +1,50 @@
+footer{
+    background-color: $background-color-sec;
+    color: $primary-color;
+    padding: 20px 5%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+
+    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.1);
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h4{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+    }
+
+
+}
+
+.footer__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li{
+        a{
+            color: $primary-color;
+            text-decoration: none;
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+
+
+.store__logo{
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+}
