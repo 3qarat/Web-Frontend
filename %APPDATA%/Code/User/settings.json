@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+      "*.vue": "vue",
+      "*.js": "javascript"
+    },
+    "typescript.validate.enable": false, // Disable TypeScript validation
+    "vetur.validation.template": true,   // Enable Vetur template validation
+    "vetur.validation.script": true,     // Enable Vetur script validation
+    "vetur.validation.style": true,      // Enable Vetur style validation
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true       // Auto-fix issues on save
+    },
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "vue"
+    ]
+  }
+  

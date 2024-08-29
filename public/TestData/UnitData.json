@@ -1,9 +1,9 @@
 {
     "title": "شاليه 200 متر للبيع فى العين السخنة بمشروع مارينا هيلز يطل على البحر مباشرة",
     "images": [
-      "/public/images/primary.jpeg",
-      "/public/images/secondary.jpeg",
-      "/public/images/third.jpeg"
+      "../images/primary.jpeg",
+      "../images/secondary.jpeg",
+      "../images/third.jpeg"
     ],
 
     "price": "3,299,999 جنيه",

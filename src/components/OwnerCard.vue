@@ -3,7 +3,7 @@
         <h3> تواصل مع البائع</h3>
         <div class="owner__info">
             <img src="../assets">
-            <h4></h4>
+            <h4>أحمد ياسر</h4>
         </div>
         
     </div>

@@ -4,14 +4,16 @@
 
           <h1 class="unit__title">
             {{ unitTitle }}
-            <font-awesome-icon :icon="['fas', 'house']"></font-awesome-icon>
+            <!-- <font-awesome-icon :icon="['fas', 'house']"></font-awesome-icon> -->
           </h1>
 
           <div class="unit__images">
             <img class="main__image" :src="unitImages[0]" alt="Main Unit Image" />
-
+             <!-- <img class="main__image" :src="getImageUrl(unitImages[0])" alt="Main Unit Image" /> -->
+             <button @click="openInGoogleMaps" class="btn__primary">شاهد المزيد من الصور</button>
             <div class="sub__images">
               <img v-for="image in unitImages.slice(1, 3)" :key="image" :src="image" alt="Unit Sub Image" />
+              <!-- <img v-for="image in unitImages.slice(1, 3)" :key="image" :src="getImageUrl(image)" alt="Unit Sub Image" /> -->
             </div>
 
           </div>
@@ -53,10 +55,31 @@
                     :icon="feature.name" /> {{ feature.value }}</li>
               </ul>
             </div>
+            <h2>الموقع </h2>
             <div class="unit__location">
-              
+              <location-component></location-component>
             </div>
 
+            <h2>شاهد أيضا </h2>
+            <div class="units__wrapper">
+              <div class="otherunit">
+                <p>شاليهات للإيجار</p>
+                <font-awesome-icon icon="circle-chevron-left" class="left_arrow"/>
+              </div>
+              <div class="otherunit">
+                <p>شقق للإيجار </p>
+                <font-awesome-icon icon="circle-chevron-left" class="left_arrow"/>
+              </div>
+              <div class="otherunit">
+                <p>شقق للبيع</p>
+                <font-awesome-icon icon="circle-chevron-left" class="left_arrow"/>
+              </div>
+              <div class="otherunit">
+                <p>فلل للبيع</p>
+                <font-awesome-icon icon="circle-chevron-left" class="left_arrow"/>
+              </div>
+            </div>
+            
           </section>
           <side-bar></side-bar>
         </section>
@@ -66,11 +89,12 @@
 
 <script setup>
 import { ref } from 'vue';
-import UnitData from '../../assets/TestData/UnitData.json';
+import UnitData from '../../../public/TestData/UnitData.json';
 import { computed } from 'vue';
 
 import SideBar from '../../layout/SideBar.vue';
 import FooterLayout from '../../layout/FooterLayout.vue';
+import LocationComponent from '../../components/LocationComponent.vue';
 
 const unit = ref(UnitData); // Assuming you'll fetch or receive unit data somehow
 
@@ -88,6 +112,12 @@ function addToFavorites() {
   // Implement logic to add unit to favorites (local storage or API)
   console.log("Adding unit to favorites:", unitTitle.value);
 }
+
+// const getImageUrl = (path) => {
+//   return require(`../../../public//images/${path}`); // Assuming the images folder is directly under src/assets/
+// };
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -114,6 +144,7 @@ img:hover {
 }
 
 .unit__images {
+  position: relative;
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -185,10 +216,12 @@ img:hover {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 40px;
-
   .unit__description {
-    width: 60%;
-
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
     .description {
       width: 80%;
       font-size: 20px;
@@ -223,7 +256,64 @@ img:hover {
     }
   }
 }
+.units__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
 
+}
+.otherunit{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 60px;
+  background-color:#FFFAFA;
+  font-size: 20px;  
+  color: #091638;
+  border-radius: 8px;
+  padding: 0px 10px;
+  box-shadow: 0 0 25px 0px #00000025;
+  cursor: pointer;
+  transition: all .5s;
+  &:hover{
+    box-shadow: 0 0 25px 0px #00000037;
+    transform: scale(1.01);
+  }
+  .left_arrow{
+    font-size: 32px;
+    background-color:white;
+    color:#091638;;
+  }
+}
+.otherunit:hover .left_arrow{
+  animation: slideToLeft .7s ease-in-out infinite;
+}
+
+.btn__primary{
+  position: absolute;
+  top:90%;
+  left:0%;
+  z-index:1;
+  height: 35px;
+  background: #FFFAFA;
+  color: #091638;
+  font-size: 14px !important;
+  width: auto;
+}
+
+
+@keyframes slideToLeft {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-20%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
 </style>
 
 

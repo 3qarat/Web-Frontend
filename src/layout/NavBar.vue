@@ -3,7 +3,7 @@
 
         <div class="logo">
             <a href="/">
-                <img src="../assets/images/Logo.svg" alt="Logo" class="logo__img">
+                <img src="../../public/images/Logo.svg" alt="Logo" class="logo__img">
             </a>
         </div>
 
