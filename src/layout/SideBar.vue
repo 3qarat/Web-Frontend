@@ -1,6 +1,13 @@
 <template>
     <aside class="sidebar">
-        <owner-card></owner-card>
+     <owner-card
+      image="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=pexels-justin-shaifer-501272-1222271.jpg&fm=jpg"
+      name="John Doe"
+      rating="3"
+      location="San Francisco, CA"
+
+      ></owner-card>
+
         <h2>إعلانات ذات صلة</h2>
         <unit-card></unit-card>
         <unit-card></unit-card>
@@ -10,11 +17,12 @@
 </template>
 
 <script setup>
-import OwnerCard from '/graduation project/3qar/3qarat/src/components/OwnerCard.vue' 
+import OwnerCard from '../components/OwnerCard.vue';
 import UnitCard from '/graduation project/3qar/3qarat/src/components/UnitCard.vue'
 </script>
 
 <style lang="scss" scoped>
+
 h2{
     text-align:center;
 }

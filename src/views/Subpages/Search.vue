@@ -8,6 +8,7 @@
   </header>
 
   <form @submit.prevent="applyFilters">
+    
       <div>
         <label for="location">Choose Location</label>
         <input type="text" id="location" v-model="filters.location" />
