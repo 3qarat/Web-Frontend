@@ -88,9 +88,8 @@
     </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed, provide} from 'vue';
 import UnitData from '../../../public/TestData/UnitData.json';
-import { computed } from 'vue';
 
 import SideBar from '../../layout/SideBar.vue';
 import FooterLayout from '../../layout/FooterLayout.vue';
@@ -113,10 +112,24 @@ function addToFavorites() {
   console.log("Adding unit to favorites:", unitTitle.value);
 }
 
-// const getImageUrl = (path) => {
-//   return require(`../../../public//images/${path}`); // Assuming the images folder is directly under src/assets/
-// };
 
+const OwnerData = computed(() => unit.value?.OwnerData || {}); // Assuming you'll fetch or receive unit data somehow
+
+// Owner computed properties
+const unitOwnerName = computed(() => OwnerData.value?.Name || 'Unknown Owner');
+const unitOwnerImage = computed(() => OwnerData.value?.Image || '/default-image.jpg');
+const unitOwnerTitle = computed(() => OwnerData.value?.Title || 'No Title');
+const unitOwnerLocation = computed(() => OwnerData.value?.Location || 'No Location');
+const unitOwnerRating = computed(() => OwnerData.value?.Rating || 'No Rating');
+
+// Provide Owner data to child components
+provide('OwnerData', {
+  unitOwnerName,
+  unitOwnerImage,
+  unitOwnerTitle,
+  unitOwnerLocation,
+  unitOwnerRating,
+});
 
 </script>
 
