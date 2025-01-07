@@ -33,6 +33,14 @@
     "location": {
       "lat": 30.000,
       "lng": 31.000
+    },
+    "OwnerData":{
+      "Name": "أحمد ياسر",
+      "Title": "البائع",
+      "Image":"/public/images/Logo.jpeg",
+      "Location": "مدينة نصر, المنطقة الاولي, القاهرة",
+      "Rating": "4",
+      "Phone": "01010202030"
     }
   }
   
